@@ -131,7 +131,7 @@ if __name__ == "__main__":
         template='plotly_white',
         xaxis_title='Date',
         yaxis_title='Number of cases',
-        title='relative'
+        title='Relative'
     )
 
     buttons = []
