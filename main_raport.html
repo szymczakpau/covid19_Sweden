@@ -61,14 +61,27 @@ body {font-family: Arial;}
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Introduction')">Introduction</button>
   <button class="tablinks" onclick="openCity(event, 'Overview')">Overview</button>
-  <button class="tablinks" onclick="openCity(event, 'Comparison')" id="defaultOpen">Comparison</button>
+  <button class="tablinks" onclick="openCity(event, 'Comparison - similar country')" id="defaultOpen">Comparison - similar country</button>
+  <button class="tablinks" onclick="openCity(event, 'Comparison - similar strategy')" id="defaultOpen">Comparison - similar strategy</button>
   <button class="tablinks" onclick="openCity(event, 'Prognosis')">Prognosis</button>
 </div>
 
 <div id="Introduction" class="tabcontent">
 </div>
 
-<div id="Comparison" class="tabcontent">
+
+<div id="Comparison - similar country" class="tabcontent">
+  <div class="box">
+    <iframe src="figures/similar_country_absolute.html" frameborder="0" scrolling="no" width="600" height="550" align="left">
+    </iframe>
+  </div>
+  <div class="box">
+    <iframe src="figures/similar_country_relative.html" frameborder="0" scrolling="no" width="600" height="550" align="right">
+    </iframe>
+  </div>
+</div>
+
+<div id="Comparison - similar strategy" class="tabcontent">
   <div class="box">
     <iframe src="figures/similar_strategy_absolute.html" frameborder="0" scrolling="no" width="600" height="550" align="left">
     </iframe>

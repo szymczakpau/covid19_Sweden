@@ -23,7 +23,7 @@ if __name__ == "__main__":
     similar_strategy_relative = pd.DataFrame.copy(similar_strategy, deep=True)
     similar_strategy_relative.iloc[0, 1:] = similar_strategy_relative.iloc[0, 1:].apply(
         lambda x: x / 17.28)  # Netherlands
-    similar_strategy_relative.iloc[1, 1:] = similar_strategy_relative.iloc[2, 1:].apply(
+    similar_strategy_relative.iloc[1, 1:] = similar_strategy_relative.iloc[1, 1:].apply(
         lambda x: x / 37.97)  # Poland
     similar_strategy_relative.iloc[2, 1:] = similar_strategy_relative.iloc[2, 1:].apply(
         lambda x: x / 10.23)  # Sweden
