@@ -110,8 +110,7 @@ if __name__ == "__main__":
         y=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Sweden")]["Number"],
         mode='lines',
         name="Sweden",
-        marker=dict(color="#F75D28"),
-
+        line=dict(color="#F75D28"),
     )
     )
 
@@ -120,8 +119,8 @@ if __name__ == "__main__":
         y=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Switzerland")]["Number"],
         mode='lines',
         name="Switzerland",
-        marker=dict(color="#00A6ED"),
-        visible='legendonly'
+        line=dict(color="#00A6ED"),
+        visible='legendonly',
     )
     )
 
@@ -142,7 +141,8 @@ if __name__ == "__main__":
         margin=dict(t=0, b=0, l=0, r=0),
         template='plotly_white',
         xaxis_title='Date',
-        yaxis_title='Number of cases per 1M of the population'
+        yaxis_title='Number of cases per 1M of the population',
+        title='Relative'
     )
 
     buttons = []
@@ -185,9 +185,9 @@ if __name__ == "__main__":
         direction="down",
         pad={"r": 10, "t": 10},
         showactive=True,
-        x=0.15,
+        x=0.40,
         xanchor="left",
-        y=1.1,
+        y=1.2,
         yanchor="top"
     )
 
@@ -196,9 +196,10 @@ if __name__ == "__main__":
     fig.update_layout(
         annotations=[
             dict(text="Y axis:", showarrow=False,
-                 x=0, y=1.06, xref="paper", yref="paper", align="left")
+                 x=0.25, y=1.15, xref="paper", yref="paper", align="left")
         ]
     )
+
 
 
     fig.write_html("../figures/similar_strategy_relative.html")

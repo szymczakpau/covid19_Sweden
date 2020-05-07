@@ -111,7 +111,8 @@ if __name__ == "__main__":
         margin=dict(t=0, b=0, l=0, r=0),
         template='plotly_white',
         xaxis_title='Date',
-        yaxis_title='Number of cases'
+        yaxis_title='Number of cases',
+        title='Absolute'
     )
 
     buttons = []
@@ -154,9 +155,9 @@ if __name__ == "__main__":
         direction="down",
         pad={"r": 10, "t": 10},
         showactive=True,
-        x=0.15,
+        x=0.40,
         xanchor="left",
-        y=1.1,
+        y=1.2,
         yanchor="top"
     )
 
@@ -165,7 +166,7 @@ if __name__ == "__main__":
     fig.update_layout(
         annotations=[
             dict(text="Y axis:", showarrow=False,
-                 x=0, y=1.06, xref="paper", yref="paper", align="left")
+                 x=0.25, y=1.15, xref="paper", yref="paper", align="left")
         ]
     )
 
