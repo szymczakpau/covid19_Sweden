@@ -54,11 +54,12 @@ body {font-family: Arial;}
 
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Introduction')"  id="defaultOpen">Introduction</button>
-  <button class="tablinks" onclick="openCity(event, 'Overview')">Overview</button>
-  <button class="tablinks" onclick="openCity(event, 'Comparison - similar country')">Comparison - similar country</button>
-  <button class="tablinks" onclick="openCity(event, 'Comparison - similar strategy')">Comparison - similar strategy</button>
-  <button class="tablinks" onclick="openCity(event, 'Prognosis')">Prognosis</button>
+  <button class="tablinks" onclick="openTab(event, 'Introduction')"  id="defaultOpen">Introduction</button>
+  <button class="tablinks" onclick="openTab(event, 'Overview - Sweden')">Overview - Sweden</button>
+    <button class="tablinks" onclick="openTab(event, 'Overview - Scandinavia')">Overview - Scandinavia</button>
+  <button class="tablinks" onclick="openTab(event, 'Comparison - similar country')">Comparison - similar country</button>
+  <button class="tablinks" onclick="openTab(event, 'Comparison - similar strategy')">Comparison - similar strategy</button>
+  <button class="tablinks" onclick="openTab(event, 'Prognosis')">Prognosis</button>
 </div>
 
 <div id="Introduction" class="tabcontent">
@@ -67,9 +68,12 @@ body {font-family: Arial;}
     </div>
 </div>
 
-<div id="Overview" class="tabcontent">
-        <object data="figures/sweden_covid.html" frameborder="0" scrolling="no" width="600" height="520" align="left"></object>
+<div id="Overview - Sweden" class="tabcontent">
+        <object data="figures/sweden_covid.html" frameborder="0" scrolling="no" width="1200" height="520" align="left"></object>
+</div>
 
+<div id="Overview - Scandinavia" class="tabcontent">
+        <object data="figures/scandinavia_covid.html" frameborder="0" scrolling="no" width="1200" height="520" align="left"></object>
 </div>
 
 <div id="Comparison - similar country" class="tabcontent">
@@ -87,7 +91,7 @@ body {font-family: Arial;}
 
 
 <script>
-function openCity(evt, cityName) {
+function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -97,7 +101,7 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 
