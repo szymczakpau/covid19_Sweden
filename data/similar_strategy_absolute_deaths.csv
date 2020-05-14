@@ -1,0 +1,526 @@
+,Country,Date,Number
+0,Netherlands,2020-01-30,0
+1,Poland,2020-01-30,0
+2,Sweden,2020-01-30,0
+3,Switzerland,2020-01-30,0
+4,United Kingdom,2020-01-30,0
+5,Netherlands,2020-01-31,0
+6,Poland,2020-01-31,0
+7,Sweden,2020-01-31,0
+8,Switzerland,2020-01-31,0
+9,United Kingdom,2020-01-31,0
+10,Netherlands,2020-02-01,0
+11,Poland,2020-02-01,0
+12,Sweden,2020-02-01,0
+13,Switzerland,2020-02-01,0
+14,United Kingdom,2020-02-01,0
+15,Netherlands,2020-02-02,0
+16,Poland,2020-02-02,0
+17,Sweden,2020-02-02,0
+18,Switzerland,2020-02-02,0
+19,United Kingdom,2020-02-02,0
+20,Netherlands,2020-02-03,0
+21,Poland,2020-02-03,0
+22,Sweden,2020-02-03,0
+23,Switzerland,2020-02-03,0
+24,United Kingdom,2020-02-03,0
+25,Netherlands,2020-02-04,0
+26,Poland,2020-02-04,0
+27,Sweden,2020-02-04,0
+28,Switzerland,2020-02-04,0
+29,United Kingdom,2020-02-04,0
+30,Netherlands,2020-02-05,0
+31,Poland,2020-02-05,0
+32,Sweden,2020-02-05,0
+33,Switzerland,2020-02-05,0
+34,United Kingdom,2020-02-05,0
+35,Netherlands,2020-02-06,0
+36,Poland,2020-02-06,0
+37,Sweden,2020-02-06,0
+38,Switzerland,2020-02-06,0
+39,United Kingdom,2020-02-06,0
+40,Netherlands,2020-02-07,0
+41,Poland,2020-02-07,0
+42,Sweden,2020-02-07,0
+43,Switzerland,2020-02-07,0
+44,United Kingdom,2020-02-07,0
+45,Netherlands,2020-02-08,0
+46,Poland,2020-02-08,0
+47,Sweden,2020-02-08,0
+48,Switzerland,2020-02-08,0
+49,United Kingdom,2020-02-08,0
+50,Netherlands,2020-02-09,0
+51,Poland,2020-02-09,0
+52,Sweden,2020-02-09,0
+53,Switzerland,2020-02-09,0
+54,United Kingdom,2020-02-09,0
+55,Netherlands,2020-02-10,0
+56,Poland,2020-02-10,0
+57,Sweden,2020-02-10,0
+58,Switzerland,2020-02-10,0
+59,United Kingdom,2020-02-10,0
+60,Netherlands,2020-02-11,0
+61,Poland,2020-02-11,0
+62,Sweden,2020-02-11,0
+63,Switzerland,2020-02-11,0
+64,United Kingdom,2020-02-11,0
+65,Netherlands,2020-02-12,0
+66,Poland,2020-02-12,0
+67,Sweden,2020-02-12,0
+68,Switzerland,2020-02-12,0
+69,United Kingdom,2020-02-12,0
+70,Netherlands,2020-02-13,0
+71,Poland,2020-02-13,0
+72,Sweden,2020-02-13,0
+73,Switzerland,2020-02-13,0
+74,United Kingdom,2020-02-13,0
+75,Netherlands,2020-02-14,0
+76,Poland,2020-02-14,0
+77,Sweden,2020-02-14,0
+78,Switzerland,2020-02-14,0
+79,United Kingdom,2020-02-14,0
+80,Netherlands,2020-02-15,0
+81,Poland,2020-02-15,0
+82,Sweden,2020-02-15,0
+83,Switzerland,2020-02-15,0
+84,United Kingdom,2020-02-15,0
+85,Netherlands,2020-02-16,0
+86,Poland,2020-02-16,0
+87,Sweden,2020-02-16,0
+88,Switzerland,2020-02-16,0
+89,United Kingdom,2020-02-16,0
+90,Netherlands,2020-02-17,0
+91,Poland,2020-02-17,0
+92,Sweden,2020-02-17,0
+93,Switzerland,2020-02-17,0
+94,United Kingdom,2020-02-17,0
+95,Netherlands,2020-02-18,0
+96,Poland,2020-02-18,0
+97,Sweden,2020-02-18,0
+98,Switzerland,2020-02-18,0
+99,United Kingdom,2020-02-18,0
+100,Netherlands,2020-02-19,0
+101,Poland,2020-02-19,0
+102,Sweden,2020-02-19,0
+103,Switzerland,2020-02-19,0
+104,United Kingdom,2020-02-19,0
+105,Netherlands,2020-02-20,0
+106,Poland,2020-02-20,0
+107,Sweden,2020-02-20,0
+108,Switzerland,2020-02-20,0
+109,United Kingdom,2020-02-20,0
+110,Netherlands,2020-02-21,0
+111,Poland,2020-02-21,0
+112,Sweden,2020-02-21,0
+113,Switzerland,2020-02-21,0
+114,United Kingdom,2020-02-21,0
+115,Netherlands,2020-02-22,0
+116,Poland,2020-02-22,0
+117,Sweden,2020-02-22,0
+118,Switzerland,2020-02-22,0
+119,United Kingdom,2020-02-22,0
+120,Netherlands,2020-02-23,0
+121,Poland,2020-02-23,0
+122,Sweden,2020-02-23,0
+123,Switzerland,2020-02-23,0
+124,United Kingdom,2020-02-23,0
+125,Netherlands,2020-02-24,0
+126,Poland,2020-02-24,0
+127,Sweden,2020-02-24,0
+128,Switzerland,2020-02-24,0
+129,United Kingdom,2020-02-24,0
+130,Netherlands,2020-02-25,0
+131,Poland,2020-02-25,0
+132,Sweden,2020-02-25,0
+133,Switzerland,2020-02-25,0
+134,United Kingdom,2020-02-25,0
+135,Netherlands,2020-02-26,0
+136,Poland,2020-02-26,0
+137,Sweden,2020-02-26,0
+138,Switzerland,2020-02-26,0
+139,United Kingdom,2020-02-26,0
+140,Netherlands,2020-02-27,0
+141,Poland,2020-02-27,0
+142,Sweden,2020-02-27,0
+143,Switzerland,2020-02-27,0
+144,United Kingdom,2020-02-27,0
+145,Netherlands,2020-02-28,0
+146,Poland,2020-02-28,0
+147,Sweden,2020-02-28,0
+148,Switzerland,2020-02-28,0
+149,United Kingdom,2020-02-28,0
+150,Netherlands,2020-02-29,0
+151,Poland,2020-02-29,0
+152,Sweden,2020-02-29,0
+153,Switzerland,2020-02-29,0
+154,United Kingdom,2020-02-29,0
+155,Netherlands,2020-03-01,0
+156,Poland,2020-03-01,0
+157,Sweden,2020-03-01,0
+158,Switzerland,2020-03-01,0
+159,United Kingdom,2020-03-01,0
+160,Netherlands,2020-03-02,0
+161,Poland,2020-03-02,0
+162,Sweden,2020-03-02,0
+163,Switzerland,2020-03-02,0
+164,United Kingdom,2020-03-02,0
+165,Netherlands,2020-03-03,0
+166,Poland,2020-03-03,0
+167,Sweden,2020-03-03,0
+168,Switzerland,2020-03-03,0
+169,United Kingdom,2020-03-03,0
+170,Netherlands,2020-03-04,0
+171,Poland,2020-03-04,0
+172,Sweden,2020-03-04,0
+173,Switzerland,2020-03-04,0
+174,United Kingdom,2020-03-04,0
+175,Netherlands,2020-03-05,0
+176,Poland,2020-03-05,0
+177,Sweden,2020-03-05,0
+178,Switzerland,2020-03-05,1
+179,United Kingdom,2020-03-05,0
+180,Netherlands,2020-03-06,1
+181,Poland,2020-03-06,0
+182,Sweden,2020-03-06,0
+183,Switzerland,2020-03-06,1
+184,United Kingdom,2020-03-06,1
+185,Netherlands,2020-03-07,1
+186,Poland,2020-03-07,0
+187,Sweden,2020-03-07,0
+188,Switzerland,2020-03-07,1
+189,United Kingdom,2020-03-07,2
+190,Netherlands,2020-03-08,3
+191,Poland,2020-03-08,0
+192,Sweden,2020-03-08,0
+193,Switzerland,2020-03-08,2
+194,United Kingdom,2020-03-08,2
+195,Netherlands,2020-03-09,3
+196,Poland,2020-03-09,0
+197,Sweden,2020-03-09,0
+198,Switzerland,2020-03-09,2
+199,United Kingdom,2020-03-09,3
+200,Netherlands,2020-03-10,4
+201,Poland,2020-03-10,0
+202,Sweden,2020-03-10,0
+203,Switzerland,2020-03-10,3
+204,United Kingdom,2020-03-10,7
+205,Netherlands,2020-03-11,5
+206,Poland,2020-03-11,0
+207,Sweden,2020-03-11,1
+208,Switzerland,2020-03-11,4
+209,United Kingdom,2020-03-11,7
+210,Netherlands,2020-03-12,5
+211,Poland,2020-03-12,1
+212,Sweden,2020-03-12,1
+213,Switzerland,2020-03-12,4
+214,United Kingdom,2020-03-12,9
+215,Netherlands,2020-03-13,10
+216,Poland,2020-03-13,2
+217,Sweden,2020-03-13,1
+218,Switzerland,2020-03-13,11
+219,United Kingdom,2020-03-13,10
+220,Netherlands,2020-03-14,12
+221,Poland,2020-03-14,3
+222,Sweden,2020-03-14,2
+223,Switzerland,2020-03-14,13
+224,United Kingdom,2020-03-14,28
+225,Netherlands,2020-03-15,20
+226,Poland,2020-03-15,3
+227,Sweden,2020-03-15,3
+228,Switzerland,2020-03-15,14
+229,United Kingdom,2020-03-15,43
+230,Netherlands,2020-03-16,24
+231,Poland,2020-03-16,4
+232,Sweden,2020-03-16,6
+233,Switzerland,2020-03-16,14
+234,United Kingdom,2020-03-16,65
+235,Netherlands,2020-03-17,43
+236,Poland,2020-03-17,5
+237,Sweden,2020-03-17,7
+238,Switzerland,2020-03-17,27
+239,United Kingdom,2020-03-17,81
+240,Netherlands,2020-03-18,58
+241,Poland,2020-03-18,5
+242,Sweden,2020-03-18,10
+243,Switzerland,2020-03-18,28
+244,United Kingdom,2020-03-18,115
+245,Netherlands,2020-03-19,76
+246,Poland,2020-03-19,5
+247,Sweden,2020-03-19,11
+248,Switzerland,2020-03-19,41
+249,United Kingdom,2020-03-19,158
+250,Netherlands,2020-03-20,106
+251,Poland,2020-03-20,5
+252,Sweden,2020-03-20,16
+253,Switzerland,2020-03-20,54
+254,United Kingdom,2020-03-20,194
+255,Netherlands,2020-03-21,136
+256,Poland,2020-03-21,5
+257,Sweden,2020-03-21,20
+258,Switzerland,2020-03-21,75
+259,United Kingdom,2020-03-21,250
+260,Netherlands,2020-03-22,179
+261,Poland,2020-03-22,7
+262,Sweden,2020-03-22,21
+263,Switzerland,2020-03-22,98
+264,United Kingdom,2020-03-22,285
+265,Netherlands,2020-03-23,213
+266,Poland,2020-03-23,8
+267,Sweden,2020-03-23,25
+268,Switzerland,2020-03-23,120
+269,United Kingdom,2020-03-23,359
+270,Netherlands,2020-03-24,276
+271,Poland,2020-03-24,10
+272,Sweden,2020-03-24,36
+273,Switzerland,2020-03-24,122
+274,United Kingdom,2020-03-24,508
+275,Netherlands,2020-03-25,356
+276,Poland,2020-03-25,14
+277,Sweden,2020-03-25,62
+278,Switzerland,2020-03-25,153
+279,United Kingdom,2020-03-25,694
+280,Netherlands,2020-03-26,434
+281,Poland,2020-03-26,16
+282,Sweden,2020-03-26,77
+283,Switzerland,2020-03-26,191
+284,United Kingdom,2020-03-26,877
+285,Netherlands,2020-03-27,546
+286,Poland,2020-03-27,16
+287,Sweden,2020-03-27,105
+288,Switzerland,2020-03-27,231
+289,United Kingdom,2020-03-27,1161
+290,Netherlands,2020-03-28,639
+291,Poland,2020-03-28,18
+292,Sweden,2020-03-28,105
+293,Switzerland,2020-03-28,264
+294,United Kingdom,2020-03-28,1455
+295,Netherlands,2020-03-29,771
+296,Poland,2020-03-29,22
+297,Sweden,2020-03-29,110
+298,Switzerland,2020-03-29,300
+299,United Kingdom,2020-03-29,1669
+300,Netherlands,2020-03-30,864
+301,Poland,2020-03-30,31
+302,Sweden,2020-03-30,146
+303,Switzerland,2020-03-30,359
+304,United Kingdom,2020-03-30,2043
+305,Netherlands,2020-03-31,1039
+306,Poland,2020-03-31,33
+307,Sweden,2020-03-31,180
+308,Switzerland,2020-03-31,433
+309,United Kingdom,2020-03-31,2425
+310,Netherlands,2020-04-01,1173
+311,Poland,2020-04-01,43
+312,Sweden,2020-04-01,239
+313,Switzerland,2020-04-01,488
+314,United Kingdom,2020-04-01,3095
+315,Netherlands,2020-04-02,1339
+316,Poland,2020-04-02,57
+317,Sweden,2020-04-02,308
+318,Switzerland,2020-04-02,536
+319,United Kingdom,2020-04-02,3747
+320,Netherlands,2020-04-03,1487
+321,Poland,2020-04-03,71
+322,Sweden,2020-04-03,358
+323,Switzerland,2020-04-03,591
+324,United Kingdom,2020-04-03,4461
+325,Netherlands,2020-04-04,1651
+326,Poland,2020-04-04,79
+327,Sweden,2020-04-04,373
+328,Switzerland,2020-04-04,666
+329,United Kingdom,2020-04-04,5221
+330,Netherlands,2020-04-05,1766
+331,Poland,2020-04-05,94
+332,Sweden,2020-04-05,401
+333,Switzerland,2020-04-05,715
+334,United Kingdom,2020-04-05,5865
+335,Netherlands,2020-04-06,1867
+336,Poland,2020-04-06,107
+337,Sweden,2020-04-06,477
+338,Switzerland,2020-04-06,765
+339,United Kingdom,2020-04-06,6433
+340,Netherlands,2020-04-07,2101
+341,Poland,2020-04-07,129
+342,Sweden,2020-04-07,591
+343,Switzerland,2020-04-07,821
+344,United Kingdom,2020-04-07,7471
+345,Netherlands,2020-04-08,2248
+346,Poland,2020-04-08,159
+347,Sweden,2020-04-08,687
+348,Switzerland,2020-04-08,895
+349,United Kingdom,2020-04-08,8505
+350,Netherlands,2020-04-09,2396
+351,Poland,2020-04-09,174
+352,Sweden,2020-04-09,793
+353,Switzerland,2020-04-09,948
+354,United Kingdom,2020-04-09,9608
+355,Netherlands,2020-04-10,2511
+356,Poland,2020-04-10,181
+357,Sweden,2020-04-10,870
+358,Switzerland,2020-04-10,1002
+359,United Kingdom,2020-04-10,10760
+360,Netherlands,2020-04-11,2643
+361,Poland,2020-04-11,208
+362,Sweden,2020-04-11,887
+363,Switzerland,2020-04-11,1036
+364,United Kingdom,2020-04-11,11599
+365,Netherlands,2020-04-12,2737
+366,Poland,2020-04-12,232
+367,Sweden,2020-04-12,899
+368,Switzerland,2020-04-12,1106
+369,United Kingdom,2020-04-12,12285
+370,Netherlands,2020-04-13,2823
+371,Poland,2020-04-13,245
+372,Sweden,2020-04-13,919
+373,Switzerland,2020-04-13,1138
+374,United Kingdom,2020-04-13,13029
+375,Netherlands,2020-04-14,2945
+376,Poland,2020-04-14,263
+377,Sweden,2020-04-14,1033
+378,Switzerland,2020-04-14,1174
+379,United Kingdom,2020-04-14,14073
+380,Netherlands,2020-04-15,3134
+381,Poland,2020-04-15,286
+382,Sweden,2020-04-15,1203
+383,Switzerland,2020-04-15,1239
+384,United Kingdom,2020-04-15,14915
+385,Netherlands,2020-04-16,3315
+386,Poland,2020-04-16,314
+387,Sweden,2020-04-16,1333
+388,Switzerland,2020-04-16,1281
+389,United Kingdom,2020-04-16,15944
+390,Netherlands,2020-04-17,3459
+391,Poland,2020-04-17,332
+392,Sweden,2020-04-17,1400
+393,Switzerland,2020-04-17,1327
+394,United Kingdom,2020-04-17,16879
+395,Netherlands,2020-04-18,3601
+396,Poland,2020-04-18,347
+397,Sweden,2020-04-18,1511
+398,Switzerland,2020-04-18,1368
+399,United Kingdom,2020-04-18,17994
+400,Netherlands,2020-04-19,3684
+401,Poland,2020-04-19,360
+402,Sweden,2020-04-19,1540
+403,Switzerland,2020-04-19,1393
+404,United Kingdom,2020-04-19,18492
+405,Netherlands,2020-04-20,3751
+406,Poland,2020-04-20,380
+407,Sweden,2020-04-20,1580
+408,Switzerland,2020-04-20,1429
+409,United Kingdom,2020-04-20,19051
+410,Netherlands,2020-04-21,3916
+411,Poland,2020-04-21,401
+412,Sweden,2020-04-21,1765
+413,Switzerland,2020-04-21,1478
+414,United Kingdom,2020-04-21,20223
+415,Netherlands,2020-04-22,4054
+416,Poland,2020-04-22,426
+417,Sweden,2020-04-22,1937
+418,Switzerland,2020-04-22,1509
+419,United Kingdom,2020-04-22,21060
+420,Netherlands,2020-04-23,4177
+421,Poland,2020-04-23,454
+422,Sweden,2020-04-23,2021
+423,Switzerland,2020-04-23,1549
+424,United Kingdom,2020-04-23,21787
+425,Netherlands,2020-04-24,4289
+426,Poland,2020-04-24,494
+427,Sweden,2020-04-24,2152
+428,Switzerland,2020-04-24,1589
+429,United Kingdom,2020-04-24,22792
+430,Netherlands,2020-04-25,4409
+431,Poland,2020-04-25,524
+432,Sweden,2020-04-25,2192
+433,Switzerland,2020-04-25,1599
+434,United Kingdom,2020-04-25,23635
+435,Netherlands,2020-04-26,4475
+436,Poland,2020-04-26,535
+437,Sweden,2020-04-26,2194
+438,Switzerland,2020-04-26,1610
+439,United Kingdom,2020-04-26,24055
+440,Netherlands,2020-04-27,4518
+441,Poland,2020-04-27,562
+442,Sweden,2020-04-27,2274
+443,Switzerland,2020-04-27,1665
+444,United Kingdom,2020-04-27,24393
+445,Netherlands,2020-04-28,4566
+446,Poland,2020-04-28,596
+447,Sweden,2020-04-28,2355
+448,Switzerland,2020-04-28,1699
+449,United Kingdom,2020-04-28,25302
+450,Netherlands,2020-04-29,4711
+451,Poland,2020-04-29,624
+452,Sweden,2020-04-29,2462
+453,Switzerland,2020-04-29,1716
+454,United Kingdom,2020-04-29,26097
+455,Netherlands,2020-04-30,4795
+456,Poland,2020-04-30,644
+457,Sweden,2020-04-30,2586
+458,Switzerland,2020-04-30,1737
+459,United Kingdom,2020-04-30,26771
+460,Netherlands,2020-05-01,4893
+461,Poland,2020-05-01,651
+462,Sweden,2020-05-01,2653
+463,Switzerland,2020-05-01,1754
+464,United Kingdom,2020-05-01,27510
+465,Netherlands,2020-05-02,4987
+466,Poland,2020-05-02,664
+467,Sweden,2020-05-02,2669
+468,Switzerland,2020-05-02,1762
+469,United Kingdom,2020-05-02,28131
+470,Netherlands,2020-05-03,5056
+471,Poland,2020-05-03,678
+472,Sweden,2020-05-03,2679
+473,Switzerland,2020-05-03,1762
+474,United Kingdom,2020-05-03,28446
+475,Netherlands,2020-05-04,5082
+476,Poland,2020-05-04,698
+477,Sweden,2020-05-04,2769
+478,Switzerland,2020-05-04,1784
+479,United Kingdom,2020-05-04,28734
+480,Netherlands,2020-05-05,5168
+481,Poland,2020-05-05,716
+482,Sweden,2020-05-05,2854
+483,Switzerland,2020-05-05,1795
+484,United Kingdom,2020-05-05,29427
+485,Netherlands,2020-05-06,5204
+486,Poland,2020-05-06,733
+487,Sweden,2020-05-06,2941
+488,Switzerland,2020-05-06,1805
+489,United Kingdom,2020-05-06,30076
+490,Netherlands,2020-05-07,5288
+491,Poland,2020-05-07,755
+492,Sweden,2020-05-07,3040
+493,Switzerland,2020-05-07,1810
+494,United Kingdom,2020-05-07,30615
+495,Netherlands,2020-05-08,5359
+496,Poland,2020-05-08,776
+497,Sweden,2020-05-08,3175
+498,Switzerland,2020-05-08,1823
+499,United Kingdom,2020-05-08,31241
+500,Netherlands,2020-05-09,5422
+501,Poland,2020-05-09,785
+502,Sweden,2020-05-09,3220
+503,Switzerland,2020-05-09,1830
+504,United Kingdom,2020-05-09,31587
+505,Netherlands,2020-05-10,5440
+506,Poland,2020-05-10,800
+507,Sweden,2020-05-10,3225
+508,Switzerland,2020-05-10,1833
+509,United Kingdom,2020-05-10,31855
+510,Netherlands,2020-05-11,5456
+511,Poland,2020-05-11,811
+512,Sweden,2020-05-11,3256
+513,Switzerland,2020-05-11,1845
+514,United Kingdom,2020-05-11,32065
+515,Netherlands,2020-05-12,5510
+516,Poland,2020-05-12,839
+517,Sweden,2020-05-12,3313
+518,Switzerland,2020-05-12,1867
+519,United Kingdom,2020-05-12,32692
+520,Netherlands,2020-05-13,5562
+521,Poland,2020-05-13,861
+522,Sweden,2020-05-13,3460
+523,Switzerland,2020-05-13,1870
+524,United Kingdom,2020-05-13,33186

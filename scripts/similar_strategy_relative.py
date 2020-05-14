@@ -6,133 +6,77 @@ Data comes from COVID-19 Data Repository by the Center for Systems Science and E
 https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
 """
 
+def clean_data(df):
+    df = df[df['Country/Region'].isin(['Sweden', 'Netherlands', 'Switzerland', 'Poland', 'United Kingdom'])]
+    df = df[df.isnull().any(axis=1)]
+    df = df.drop(['Province/State', 'Lat', 'Long'], axis=1)
+    cols = [i for i in range(1, 9)]
+    df.drop(df.columns[cols],axis=1,inplace=True)
+    # Change format from wide to long for plotting
+    df = df.rename(columns={'Country/Region': 'Country'})
+    df = pd.melt(df, id_vars=['Country'], var_name='Date', value_name='Number')
+    # Change data column for time series
+    df['Date'] = df['Date'].astype('datetime64[ns]')
+    return df
+
+def make_relative(df):
+    populations = {
+        'Netherlands': 17.28,
+        'Poland': 37.97,
+        'Sweden': 10.23,
+        'Switzerland': 8.57,
+        'United Kingdom': 66.65,
+    }
+    new_df = df.copy()
+    for country, number in populations.items():
+        indexes = new_df[new_df['Country'] == country]['Number'].index.values
+        new_df.iloc[indexes, 2] = new_df.iloc[indexes, 2].apply(lambda x: (int(x)/number))
+    return new_df
+
 if __name__ == "__main__":
 
-    world = pd.read_csv('../data/time_series_covid19_confirmed_global.csv')
-    similar_strategy = world[world['Country/Region'].isin(['Sweden', 'Netherlands', 'Switzerland', 'Poland', 'United Kingdom'])]
-    # ABSOLUTE
-    # Remove Provinces and Lat, Long
-    similar_strategy = similar_strategy[similar_strategy.isnull().any(axis=1)]
-    similar_strategy = similar_strategy.drop(['Province/State', 'Lat', 'Long'], axis=1)
-
-    # Forward to first cases in Sweden and United Kingdom
-    cols = [i for i in range(1, 40)]
-    similar_strategy.drop(similar_strategy.columns[cols],axis=1,inplace=True)
-
-    # Change format from wide to long for plotting
-    similar_strategy_relative = pd.DataFrame.copy(similar_strategy, deep=True)
-    similar_strategy_relative.iloc[0, 1:] = similar_strategy_relative.iloc[0, 1:].apply(
-        lambda x: x / 17.28)  # Netherlands
-    similar_strategy_relative.iloc[1, 1:] = similar_strategy_relative.iloc[1, 1:].apply(
-        lambda x: x / 37.97)  # Poland
-    similar_strategy_relative.iloc[2, 1:] = similar_strategy_relative.iloc[2, 1:].apply(
-        lambda x: x / 10.23)  # Sweden
-    similar_strategy_relative.iloc[3, 1:] = similar_strategy_relative.iloc[3, 1:].apply(
-        lambda x: x / 8.57)  # Switzerland
-    similar_strategy_relative.iloc[4, 1:] = similar_strategy_relative.iloc[4, 1:].apply(
-        lambda x: x / 66.65)  # UK
+    world_cases = pd.read_csv('../data/time_series_covid19_confirmed_global.csv')
+    world_deaths = pd.read_csv('../data/time_series_covid19_deaths_global.csv')
+    strategy_deaths = clean_data(world_deaths)
+    strategy_cases = clean_data(world_cases)
+    strategy_cases_relative = make_relative(strategy_cases)
+    strategy_deaths_relative = make_relative(strategy_deaths)
+    strategy_cases_relative.to_csv('../data/similar_strategy_relative_cases.csv')
+    strategy_deaths_relative.to_csv('../data/similar_strategy_relative_deaths.csv')
 
 
-    similar_strategy_relative = pd.melt(
-        similar_strategy_relative,
-        id_vars=['Country/Region'],
-        var_name='Date',
-        value_name='Number of cases'
-    )
-
-    # Change data column for time series
-    similar_strategy_relative['Date'] = similar_strategy_relative['Date'].astype('datetime64[ns]')
-    similar_strategy_relative.to_csv('../data/similar_strategy_relative_cases.csv')
-
-    # Read test data
     tests = pd.read_csv('../data/full-list-total-tests-for-covid-19.csv')
-    tests = tests[tests['Entity'].isin(['Sweden', 'Netherlands', 'Switzerland', 'Poland', 'United Kingdom'])]
+    tests = tests.drop(['Code'], axis=1)
+    tests = tests.rename(columns={'Entity': 'Country', 'Total tests': 'Number'})
+    tests = tests[tests['Country'].isin(['Sweden', 'Netherlands', 'Switzerland', 'Poland', 'United Kingdom'])]
+    tests = tests.reset_index(drop=True)
     tests['Date'] = tests['Date'].astype('datetime64[ns]')
-    tests = tests.reset_index()
-
-    netherland_indexes = tests[tests['Entity'] == 'Netherlands']['Total tests'].index.values
-    tests.iloc[netherland_indexes, 4] = tests.iloc[netherland_indexes, 4].apply(
-        lambda x: x/17.28)  # Netherlands
-    poland_indexes = tests[tests['Entity'] == 'Poland']['Total tests'].index.values
-    tests.iloc[poland_indexes, 4] = tests.iloc[poland_indexes, 4].apply(
-        lambda x: x/37.97)  # Poland
-    switzerland_indexes = tests[tests['Entity'] == 'Switzerland']['Total tests'].index.values
-    tests.iloc[switzerland_indexes, 4] = tests.iloc[switzerland_indexes, 4].apply(
-        lambda x: x /8.57)  # Switzerland
-    sweden_indexes = tests[tests['Entity'] == 'Sweden']['Total tests'].index.values
-    tests.iloc[sweden_indexes, 4] = tests.iloc[sweden_indexes, 4].apply(
-        lambda x: x/10.23)  # Sweden
-    uk_indexes = tests[tests['Entity'] == 'United Kingdom']['Total tests'].index.values
-    tests.iloc[uk_indexes, 4] = tests.iloc[uk_indexes, 4].apply(
-        lambda x: x/66.65)  # UK
-
-    tests.to_csv('../data/similar_strategy_relative_tests.csv')
-
-    # Rename columns for plotting purposes
-    similar_strategy_relative = similar_strategy_relative.rename(
-        columns={
-            'Country/Region': 'Entity',
-            'Number of cases': 'Number'
-        }
-    )
-    tests = tests.rename(
-        columns={
-        'Total tests': 'Number'
-        }
-    )
+    tests_relative = make_relative(tests)
+    tests_relative.to_csv('../data/similar_strategy_relative_tests.csv')
 
     # PLOTTING
-    # create figure
     fig = go.Figure()
 
-    fig.add_trace(go.Scatter(
-        x=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Netherlands")]['Date'],
-        y=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Netherlands")]["Number"],
-        mode='lines',
-        name="Netherlands",
-        marker=dict(color="#7FB800"),
-        visible='legendonly'
-    )
-    )
+    countries = ['Sweden', 'Netherlands', 'Switzerland', 'Poland', 'United Kingdom']
+    colors = ['#F75D28', '#7FB800', '#00A6ED', "#EAC435", "#0D2C54"]
 
-    fig.add_trace(go.Scatter(
-        x=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Poland")]['Date'],
-        y=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Poland")]["Number"],
-        mode='lines',
-        name="Poland",
-        marker=dict(color="#EAC435"),
-        visible='legendonly'
-    )
-    )
+    for name, color in zip(countries, colors):
+        visibility = 'legendonly'
+        if name == 'Sweden':
+            visibility = True
 
-    fig.add_trace(go.Scatter(
-        x=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Sweden")]['Date'],
-        y=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Sweden")]["Number"],
-        mode='lines',
-        name="Sweden",
-        line=dict(color="#F75D28"),
-    )
-    )
+        fig.add_trace(go.Scatter(
+            x=strategy_cases_relative[(strategy_cases_relative["Country"] == name)]['Date'],
+            y=strategy_cases_relative[(strategy_cases_relative["Country"] == name)]["Number"],
+            mode='lines',
+            name=name,
+            marker=dict(color=color),
+            visible=visibility,
 
-    fig.add_trace(go.Scatter(
-        x=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Switzerland")]['Date'],
-        y=similar_strategy_relative[(similar_strategy_relative["Entity"] == "Switzerland")]["Number"],
-        mode='lines',
-        name="Switzerland",
-        line=dict(color="#00A6ED"),
-        visible='legendonly',
-    )
-    )
 
-    fig.add_trace(go.Scatter(
-        x=similar_strategy_relative[(similar_strategy_relative["Entity"] == "United Kingdom")]['Date'],
-        y=similar_strategy_relative[(similar_strategy_relative["Entity"] == "United Kingdom")]["Number"],
-        mode='lines',
-        name="United Kingdom",
-        marker=dict(color="#0D2C54"),
-        visible='legendonly'
-    )
-    )
+
+        )
+        )
 
     fig.update_layout(
         width=580,
@@ -141,33 +85,37 @@ if __name__ == "__main__":
         margin=dict(t=0, b=0, l=0, r=0),
         template='plotly_white',
         xaxis_title='Date',
-        yaxis_title='Number of cases per 1M of the population',
+        yaxis_title='Cumulative number of cases per 1M of inhabitants',
         title='Relative'
     )
 
     buttons = []
 
     for name, df, y_title in zip(
-            ['Number of cases', 'Number of tests'],
-            [similar_strategy_relative, tests],
-            ['Number of cases per 1M of the population', 'Number of tests per 1M of the population']
+            ['Cases', 'Deaths', 'Tests'],
+            [strategy_cases_relative, strategy_deaths_relative, tests_relative],
+            [
+                'Cumulative number of cases per 1M of inhabitants',
+                'Cumulative number of deaths per 1M of inhabitants',
+                'Cumulative number of tests per 1M of inhabitants'
+            ]
     ):
         buttons.append(dict(method='update',
                             label=name,
                             visible=True,
                             args=[{'x': [
-                                df[(df["Entity"] == "Netherlands")]['Date'],
-                                df[(df["Entity"] == "Poland")]['Date'],
-                                df[(df["Entity"] == "Sweden")]['Date'],
-                                df[(df["Entity"] == "Switzerland")]['Date'],
-                                df[(df["Entity"] == "United Kingdom")]['Date'],
+                                df[(df["Country"] == "Netherlands")]['Date'],
+                                df[(df["Country"] == "Poland")]['Date'],
+                                df[(df["Country"] == "Sweden")]['Date'],
+                                df[(df["Country"] == "Switzerland")]['Date'],
+                                df[(df["Country"] == "United Kingdom")]['Date'],
                             ],
                                 'y': [
-                                    df[(df["Entity"] == "Netherlands")]['Number'],
-                                    df[(df["Entity"] == "Poland")]['Number'],
-                                    df[(df["Entity"] == "Sweden")]['Number'],
-                                    df[(df["Entity"] == "Switzerland")]['Number'],
-                                    df[(df["Entity"] == "United Kingdom")]['Number'],
+                                    df[(df["Country"] == "Netherlands")]['Number'],
+                                    df[(df["Country"] == "Poland")]['Number'],
+                                    df[(df["Country"] == "Sweden")]['Number'],
+                                    df[(df["Country"] == "Switzerland")]['Number'],
+                                    df[(df["Country"] == "United Kingdom")]['Number'],
                                 ]
                             },
                                 {
@@ -200,6 +148,4 @@ if __name__ == "__main__":
         ]
     )
 
-
-
-    fig.write_html("../figures/similar_strategy_relative.html")
+    fig.write_html("../figures_html/similar_strategy_relative.html")
