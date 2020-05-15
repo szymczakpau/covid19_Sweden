@@ -80,17 +80,17 @@ if __name__ == "__main__":
                             label=name,
                             visible=True,
                             args=[{'x': [
-                                df[(df["Country"] == "Netherlands")]['Date'],
-                                df[(df["Country"] == "Poland")]['Date'],
                                 df[(df["Country"] == "Sweden")]['Date'],
+                                df[(df["Country"] == "Netherlands")]['Date'],
                                 df[(df["Country"] == "Switzerland")]['Date'],
+                                df[(df["Country"] == "Poland")]['Date'],
                                 df[(df["Country"] == "United Kingdom")]['Date'],
                             ],
                                 'y': [
-                                    df[(df["Country"] == "Netherlands")]['Number'],
-                                    df[(df["Country"] == "Poland")]['Number'],
                                     df[(df["Country"] == "Sweden")]['Number'],
+                                    df[(df["Country"] == "Netherlands")]['Number'],
                                     df[(df["Country"] == "Switzerland")]['Number'],
+                                    df[(df["Country"] == "Poland")]['Number'],
                                     df[(df["Country"] == "United Kingdom")]['Number'],
                                 ]
                             },
