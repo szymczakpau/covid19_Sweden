@@ -75,5 +75,5 @@ if __name__ == "__main__":
     )
 
     # fig.show()
-    fig.write_html("../figures/sweden_bars.html")
+    fig.write_html("../figures_html/sweden_bars.html")
 
