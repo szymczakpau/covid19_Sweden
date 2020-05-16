@@ -4,8 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style>
-body {font-family: Arial;}
-
+body {
+font-family: Arial;
+margin: 0;
+height: 100%;
+overflow: hidden
+}
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -42,6 +46,21 @@ body {font-family: Arial;}
   border: 0px solid #ccc;
   border-top: none;
   }
+
+#left_frame {
+  width: calc(50%);
+  float: left;
+}
+#right_frame {
+  width: calc(50%)
+  float: right;
+}
+#left_frame,#right_frame {
+  display: inline-block;
+  box-sizing: border-box;
+  height: calc(100vh);
+  width:100vh;
+}
 
 .box{
     float:left;
@@ -89,8 +108,8 @@ $(document).ready(function(){
 </div>
 
 <div id="Overview - Sweden" class="tabcontent">
-    <object data="figures_html/sweden_covid.html" width="600" height="550" align="left"></object>
-    <object data="figures_html/sweden_bars.html" width="600" height="520" align="right"></object>
+    <embed id="left_frame" src="figures_html/sweden_covid.html" frameBorder="0" scrolling="no"></embed>
+    <embed id="right_frame" src="figures_html/sweden_bars.html" frameBorder="0" scrolling="no"></embed>
 </div>
 
 <div id="Comparison - Scandinavia region" class="tabcontent">
