@@ -1,54 +1,21 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+from urllib.request import urlopen
+import json
 import pandas as pd
-
-import plotly
-
-import plotly.graph_objs as go
-
-
 import plotly.offline as offline
 
-from plotly.graph_objs import *
-
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-
-
-# In[2]:
-
-
-import pandas as pd
 data_xls = pd.read_excel('../data/Folkhalsomyndigheten_Covid19.xlsx', 'Antal per dag region', index_col=1)
 data_xls.to_csv('../data/Sweden_covid.csv', encoding='utf-8')
 df_sweden = pd.read_csv('../data/Sweden_covid.csv')
 
-
-# In[3]:
-
-
 for region in df_sweden.drop(["Statistikdatum"], axis = 1).columns:
     df_sweden[region] = df_sweden[region].cumsum()
 
-
-# In[4]:
-
-
-from urllib.request import urlopen
-import json
 with urlopen('https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/sweden-counties.geojson') as response:
     counties = json.load(response)
 
 sweden_counties = []
 for x in range(len(counties['features'])):
     sweden_counties.append(counties['features'][x]['properties']['name'])
-
-
-# In[5]:
-
 
 data_slider = []
 
@@ -87,9 +54,6 @@ for date in df_sweden["Statistikdatum"].unique():
     data_slider.append(data_one_date)  # I add the dictionary to the list of dictionaries for the slider
 
 
-# In[6]:
-
-
 steps = []
 
 for i in range(len(data_slider)):
@@ -104,10 +68,6 @@ for i in range(len(data_slider)):
 
 sliders = [dict(active=0, steps=steps, ticklen = 10)]
 
-
-# In[7]:
-
-
 layout = dict(
     width = 580,
     height = 500, 
@@ -117,38 +77,17 @@ layout = dict(
              lakecolor = 'rgb(73, 216, 230)',
              lataxis = {"range": [55.5, 70]}, 
              lonaxis = {"range": [11, 24.0]}, 
-             showland = False
+             showland = False,
+             countrycolor = 'white'
             ),
     sliders=sliders,
-    margin=dict(l=20, r=0, t=0, b=100)
+    margin=dict(l=20, r=0, t=0, b=100),
+
 )
 
+fig = dict(data=data_slider, layout=layout)
 
-# In[8]:
-
-
-fig = dict(data=data_slider, layout=layout) 
-
-# to plot in the notebook
-
-plotly.offline.iplot(fig)
-
-
-# In[9]:
-
+# plotly.offline.iplot(fig)
 
 offline.plot(fig, auto_open=False, image_width=580, image_height=500, 
-              filename='../figures/sweden_covid.html', validate=True)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+              filename='../figures_html/sweden_covid.html', validate=True)

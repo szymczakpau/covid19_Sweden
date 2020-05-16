@@ -7,7 +7,6 @@
 body {
 font-family: Arial;
 margin: 0;
-height: 100%;
 overflow: hidden
 }
 /* Style the tab */
@@ -48,18 +47,25 @@ overflow: hidden
   }
 
 #left_frame {
-  width: calc(50%);
+  width: 50%
   float: left;
+  overflow: hidden;
 }
+
 #right_frame {
-  width: calc(50%)
+  width: 50%
   float: right;
+  overflow: hidden;
 }
+
 #left_frame,#right_frame {
   display: inline-block;
   box-sizing: border-box;
   height: calc(100vh);
-  width:100vh;
+  width: 100vh;
+  object-fit: contain;
+  overflow: hidden;
+  text-align:center;
 }
 
 .box{
@@ -93,6 +99,9 @@ $(document).ready(function(){
   <button class="tablinks" onclick="openTab(event, 'Prognosis')">
       <a href="#" data-toggle="tooltip" data-placement="top" title="Potentially epidemic will not leave the country for the next 3 months."> Prognosis</a>
   </button>
+      <button class="tablinks" onclick="openTab(event, 'Summary')">
+      <a href="#" data-toggle="tooltip" data-placement="top" title="">Summary</a>
+  </button>
 </div>
 
 <div id="Introduction" class="tabcontent">
@@ -113,24 +122,28 @@ $(document).ready(function(){
 </div>
 
 <div id="Comparison - Scandinavia region" class="tabcontent">
-
-    <object data="figures_html/similar_country_absolute.html" width="600" height="550" align="left"></object>
-    <object data="figures_html/similar_country_relative.html"  width="600" height="550" align="right"></object>
+    <embed id="left_frame" src="figures_html/similar_country_absolute.html" frameBorder="0" scrolling="no"></embed>
+    <embed id="right_frame" src="figures_html/similar_country_relative.html" frameBorder="0" scrolling="no"></embed>
 </div>
 
 <div id="Comparison - liberal approach" class="tabcontent">
-    <object data="figures_html/similar_strategy_absolute.html"  width="600" height="520" align="left"></object>
-    <object data="figures_html/similar_strategy_relative.html"  width="600" height="520" align="right"></object>
+    <embed id="left_frame" src="figures_html/similar_strategy_absolute.html" frameBorder="0" scrolling="no"></embed>
+    <embed id="right_frame" src="figures_html/similar_strategy_relative.html" frameBorder="0" scrolling="no"></embed>
 </div>
 
 <div id="Prognosis" class="tabcontent">
-    <object data="figures_html/prognosis_daily.png" width="600" align="right"></object>
-    <object data="figures_html/prognosis_cumulative.png"  width="600" align="left">></object>
+    <embed id="left_frame" src="figures_static/prognosis_daily.png" frameBorder="0" scrolling="no"></embed>
+    <embed id="right_frame" src="figures_static/prognosis_cumulative.png" frameBorder="0" scrolling="no"></embed>
+</div>
 
+<div id="Summary" class="tabcontent">
+    <p align="center"><embed src="figures_static/GDP.png" frameBorder="0" scrolling="no"></embed></p>
 </div>
 
 
+
 <script>
+
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");

@@ -101,7 +101,7 @@ plotly.offline.iplot(fig)
 
 
 offline.plot(fig, auto_open=False, image_width=580, image_height=500, 
-              filename='../figures/scandinavia_covid.html', validate=True)
+              filename='../figures_html/scandinavia_covid.html', validate=True)
 
 
 # In[ ]:

@@ -63,14 +63,18 @@ if __name__ == "__main__":
 
     fig.update_layout(
         width=1000,
-        height=600,
+        height=550,
         autosize=False,
         margin=dict(t=0, b=0, l=0, r=0),
         template='plotly_white',
         xaxis_title='Date',
-        yaxis_title='Number of cases per 1M of inhabitants',
-        title='Relative',
-        font=dict(size=20)
+        yaxis=dict(
+            title_text="Number of cases per 1M of inhabitants",
+            # title_font = {"size": 18}
+        ),
+        font=dict(size=20),
+        xaxis_showgrid=False,
+        yaxis_showgrid=False,
     )
 
 

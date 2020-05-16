@@ -1,23 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
-
-
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
-data_xls = pd.read_excel('../data/imf-dm-export-20200516.xls', index_col=0)
+
+data_xls = pd.read_excel('../data/imf-dm-export-20200516.xlsx', index_col=0)
 data_xls.to_csv('../data/GDP_countries.csv', encoding='utf-8')
-
-
-# In[2]:
-
 
 df_GDP = pd.read_csv('../data/GDP_countries.csv')
 countries = ['Sweden','Denmark', 'Finland', 'Norway', 'Poland', "United Kingdom", "Netherlands", "Switzerland"]
 GDP_countries = df_GDP.loc[df_GDP["Real GDP growth (Annual percent change)"].isin(countries),["Real GDP growth (Annual percent change)", "2019", "2020", "2021"]]
-
-
-# In[3]:
 
 
 convert_dict = {'2019': float, 
@@ -27,24 +18,9 @@ convert_dict = {'2019': float,
 
 GDP_countries = GDP_countries.astype(convert_dict)
 
-
-# In[76]:
-
-
 list(GDP_countries["Real GDP growth (Annual percent change)"])
 
-
-# In[5]:
-
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-
-# In[85]:
-
-
-fig = plt.figure(figsize=(11.45,10.43))
+fig = plt.figure(figsize=(12,6))
 
 fake_ax = fig.add_subplot(111, frameon=False, xticks = [], yticks = [])
 fake_ax.set_xlabel("Countries", fontsize = 20, labelpad = 60)
@@ -117,7 +93,7 @@ fig.tight_layout()
 # In[86]:
 
 
-fig.savefig(fname = '../figures_html/GDP.png', dpi= 96, bbox_inches = 'tight', format = 'png')
+fig.savefig(fname = '../figures_static/GDP.png', dpi= 96, bbox_inches = 'tight', format = 'png')
 
 
 # In[87]:

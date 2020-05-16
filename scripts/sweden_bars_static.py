@@ -28,7 +28,9 @@ if __name__ == "__main__":
         template='plotly_white',
         xaxis_title='Date',
         yaxis_title='Daily new cases',
-        font=dict(size=20)
+        font=dict(size=20),
+        xaxis_showgrid=False,
+        yaxis_showgrid=False,
     )
 
     # fig.show()

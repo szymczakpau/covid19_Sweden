@@ -37,7 +37,7 @@ if __name__ == "__main__":
     plt.legend(loc='best', prop={'size': 12})
     plt.grid()
     # plt.show()
-    fig.savefig('../figures/prognosis_cumulative.png', bbox_inches='tight', dpi=300)
+    fig.savefig('../figures_static/prognosis_cumulative.png', bbox_inches='tight', dpi=96)
 
     fig = plt.figure(figsize=(5, 3))
     ax = fig.add_axes([0, 0, 1, 1])
@@ -53,4 +53,4 @@ if __name__ == "__main__":
     plt.legend(loc='best', prop={'size': 12})
     plt.grid()
     # plt.show()
-    fig.savefig('../figures/prognosis_daily.png', bbox_inches='tight', dpi=300)
+    fig.savefig('../figures_static/prognosis_daily.png', bbox_inches='tight', dpi=96)
