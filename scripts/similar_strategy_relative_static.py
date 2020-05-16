@@ -9,7 +9,7 @@ https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_c
 """
 
 def clean_data(df):
-    df = df[df['Country/Region'].isin(['Sweden', 'Netherlands', 'Switzerland', 'Poland', 'United Kingdom'])]
+    df = df[df['Country/Region'].isin(['Sweden', 'Switzerland', 'Poland', 'United Kingdom'])]
     df = df[df.isnull().any(axis=1)]
     df = df.drop(['Province/State', 'Lat', 'Long'], axis=1)
     cols = [i for i in range(1, 9)]
@@ -23,7 +23,6 @@ def clean_data(df):
 
 def make_relative(df):
     populations = {
-        'Netherlands': 17.28,
         'Poland': 37.97,
         'Sweden': 10.23,
         'Switzerland': 8.57,
@@ -45,8 +44,8 @@ if __name__ == "__main__":
     # PLOTTING
     fig = go.Figure()
 
-    countries = ['Sweden', 'Netherlands', 'Switzerland', 'Poland', 'United Kingdom']
-    colors = ['#F75D28', '#7FB800', '#00A6ED', "#EAC435", "#0D2C54"]
+    countries = ['Sweden','Switzerland', 'Poland', 'United Kingdom']
+    colors = ['#F75D28', '#00A6ED', "#EAC435", "#0D2C54"]
 
     for name, color in zip(countries, colors):
         visibility = True
