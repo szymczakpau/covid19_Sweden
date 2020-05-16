@@ -32,7 +32,7 @@ if __name__ == "__main__":
     fig = go.Figure()
 
     countries = ['Sweden', 'Switzerland', 'Poland', 'United Kingdom']
-    colors = ['#F75D28', '#7FB800', '#00A6ED', "#EAC435", "#0D2C54"]
+    colors = ['#F75D28', '#00A6ED', "#EAC435", "#0D2C54"]
 
     for name, color in zip(countries, colors):
         visibility = True
